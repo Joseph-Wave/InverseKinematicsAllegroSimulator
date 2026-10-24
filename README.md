@@ -17,8 +17,8 @@ The system consists of two independent programs linked together via IPC text-buf
 └─────────────────────────┘                                └───────────────────────────┘
 ```
 
-1. **`main_2.cpp` (Control Interface):** Built with Allegro 4.2. Handles forward/inverse kinematics equations (`Js2xyz.h`, `xyz2Js.h`), user mouse inputs, numerical display rendering, and data generation.
-2. **`main2.cpp` (3D Visualizer):** Built with freeglut & OpenGL. Reads the joint output parameters and renders the 3-DOF robotic arm in real-time, complete with bounding wireframes and workspace ground plane.
+1. **`main.cpp` (Control Interface):** Built with Allegro 4.2. Handles forward/inverse kinematics equations (`Js2xyz.h`, `xyz2Js.h`), user mouse inputs, numerical display rendering, and data generation.
+2. **`main.cpp` (3D Visualizer):** Built with freeglut & OpenGL. Reads the joint output parameters and renders the 3-DOF robotic arm in real-time, complete with bounding wireframes and workspace ground plane.
 
 ---
 
@@ -39,8 +39,8 @@ To build and run this project, you will need a 32-bit GCC compiler (recommended 
 
 ```
 .
-├── main_2.cpp              # Controller UI (Allegro 4.2)
-├── main2.cpp               # 3D Visualizer (OpenGL + freeglut)
+├── main.cpp              # Controller UI (Allegro 4.2)
+├── main.cpp               # 3D Visualizer (OpenGL + freeglut)
 ├── Js2xyz.h                # Direct Kinematics implementation header
 ├── xyz2Js.h                # Inverse Kinematics implementation header
 ├── kinematicExample.png    # Interface screenshot reference
@@ -58,8 +58,8 @@ To build and run this project, you will need a 32-bit GCC compiler (recommended 
 ### Method 1: Using Code::Blocks 10.05 (Recommended)
 
 1. Open **Code::Blocks** and create two separate Win32 GUI projects:
-   * **Project 1:** `RobotController` using `main_2.cpp`
-   * **Project 2:** `Robot3DRenderer` using `main2.cpp`
+   * **Project 1:** `RobotController` using `main.cpp`
+   * **Project 2:** `Robot3DRenderer` using `main.cpp`
 2. Configure Compiler Header Search Paths (`Search directories -> Compiler`):
    * Path to Allegro 4.2 `include/`
    * Path to freeglut `include/`
@@ -67,11 +67,11 @@ To build and run this project, you will need a 32-bit GCC compiler (recommended 
    * Path to Allegro 4.2 `lib/`
    * Path to freeglut `lib/`
 4. Add Linker Flags (`Build Options -> Linker Settings`):
-   * **For Controller (`main_2.cpp`):**
+   * **For Controller (`main.cpp`):**
      ```text
      -lalleg
      ```
-   * **For Visualizer (`main2.cpp`):**
+   * **For Visualizer (`main.cpp`):**
      ```text
      -lglew32 -lfreeglut -lopengl32 -lglu32 -lgdi32 -lwinmm
      ```
@@ -81,10 +81,10 @@ To build and run this project, you will need a 32-bit GCC compiler (recommended 
 
 ```bash
 # Compile Controller
-g++ main_2.cpp -o Controller.exe -I/path/to/allegro/include -L/path/to/allegro/lib -lalleg
+g++ main.cpp -o Controller.exe -I/path/to/allegro/include -L/path/to/allegro/lib -lalleg
 
 # Compile 3D Visualizer
-g++ main2.cpp -o Visualizer.exe -lglew32 -lfreeglut -lopengl32 -lglu32 -lgdi32 -lwinmm
+g++ main.cpp -o Visualizer.exe -lglew32 -lfreeglut -lopengl32 -lglu32 -lgdi32 -lwinmm
 ```
 
 ---
