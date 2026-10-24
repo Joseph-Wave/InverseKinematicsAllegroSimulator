@@ -1,0 +1,26 @@
+INSTALAR ALLEGRO
+
+1- extraer allegro-mingw-4.2.2
+2- copiar el contenido de la carpeta 'bin' en:
+C:\Windows
+3- copiar el contenido de la carpeta 'include' en:
+C:\Program Files (x86)\CodeBlocks\MinGW\include
+4- ir a:
+C:\Program Files (x86)\CodeBlocks\MinGW\lib
+    y hacer una nueva carpeta llamada 'Allegro'
+4- copiar el contenido de la carpeta 'lib' en esa carpeta
+
+CONFIGURAR CODEBLOCKS
+
+1- Settings -> compiler
+2- Linker settings -> add -> ...
+3- entrar a la carpeta: 
+C:\Program Files (x86)\CodeBlocks\MinGW\lib\Allegro 
+   seleccionar todos los archivos  y enter
+4- ok
+5- Search directories -> Compiler -> add -> ...
+6- seleccionar la carpeta:
+C:\Program Files (x86)\CodeBlocks\MinGW\include
+7- ok
+
+listo

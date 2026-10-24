@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1481312615 source:c:\users\joseph estrada\desktop\here\test\evolucion\06_dal\main.cpp
+	<allegro.h>
+	<fstream>
+	<iostream>
+	<cmath>
+	"Js2xyz.h"
+	"xyz2Js.h"
+
+1480829837 c:\users\joseph estrada\desktop\here\test\evolucion\06_dal\js2xyz.h
+
+1480829837 c:\users\joseph estrada\desktop\here\test\evolucion\06_dal\xyz2js.h
+

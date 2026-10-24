@@ -1,0 +1,53 @@
+INSTALAR FREEGLUT
+
+1- extraer freeglut
+2- copiar bin, include y lib en:
+C:\Program Files (x86)\CodeBlocks\MinGW
+3- abrir el block de notas como administrador
+4-abrir el archivo wizard.script de la carpeta:
+C:\Program Files (x86)\CodeBlocks\share\CodeBlocks\templates\wizard\glut
+5-buscar y remplazar todos los: glut32 con:  freeglut 
+6- guardar y cerrar
+7- abrir el block de notas como administrador
+8-abrir el archivo glut.cbp de la carpeta:
+C:\Program Files (x86)\CodeBlocks\share\CodeBlocks\templates
+9-buscar y remplazar todos los: glut32 con:  freeglut 
+10- guardar y cerrar
+
+GLEW
+1- extraer workshop
+2- ir a la carpeta freeglut-MSVC, despues a freeglut
+copiar el contenido a:
+C:\Program Files (x86)\CodeBlocks\MinGW
+3- ir a la carpeta glew-1.9.0-win32, despues a gle-1.9.0 y copiar: bin, include y lib a:
+C:\Program Files (x86)\CodeBlocks\MinGW
+4-abrir el block de notas como administrador
+5-abrir el archivo wizard.script de la carpeta:
+C:\Program Files (x86)\CodeBlocks\share\CodeBlocks\templates\wizard\glut
+6-buscar y remplazar todos los: glut32 con:  freeglut 
+7- guardar y cerrar
+8- abrir el block de notas como administrador
+9-abrir el archivo glut.cbp de la carpeta:
+C:\Program Files (x86)\CodeBlocks\share\CodeBlocks\templates
+10-buscar y remplazar todos los: glut32 con:  freeglut 
+11- guardar y cerrar
+
+CONFIGURAR CODEBLOCKS
+
+1- ir a pestaña settings -> compiler
+2- en Compiler -> add : 
+C:\Program Files (x86)\CodeBlocks\MinGW\include
+3- en Linker settings -> add:
+C:\Program Files (x86)\CodeBlocks\MinGW\lib\glew32s.lib
+C:\Program Files (x86)\CodeBlocks\MinGW\lib\freeglut.lib
+C:\Program Files (x86)\CodeBlocks\MinGW\lib\libglu32.a
+
+Nota: si no se encuentra el archivo libglu32.a copiarlo a esa carpeta
+
+4- en Linker settings -> other linker options, escribir:
+
+-lopengl32
+-lglu32
+-lglew32s
+
+
