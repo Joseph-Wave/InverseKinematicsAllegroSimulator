@@ -1,4 +1,4 @@
-# 3-DOF Robotic Arm Simulation & Kinematic Control
+# Blocky 3-DOF Robotic Arm Simulation & Kinematic Control
 
 An interactive 3D simulation and control environment for a **3-Degree-of-Freedom (3-DOF) Spatial Robotic Manipulator**. This project features a GUI controller built with **Allegro 4.2** and a real-time 3D renderer written in **C++ / OpenGL (freeglut & GLEW)** communicating via IPC datastream file buffers.
 
